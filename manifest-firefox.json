@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Rewst Buddy",
+  "version": "1.0.0",
+  "description": "Capture Rewst session data and send to VS Code",
+  "permissions": [
+    "activeTab",
+    "cookies",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://*/*"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "action": {
+    "default_popup": "popup/index.html",
+    "default_title": "Rewst Buddy",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "rewst-buddy@jbramley.com"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "rewst-buddy-web",
+  "version": "1.0.0",
+  "description": "Browser extension to capture Rewst session data and send to VS Code",
+  "scripts": {
+    "dev:chrome": "tsx scripts/build.ts chrome watch",
+    "dev:firefox": "tsx scripts/build.ts firefox watch",
+    "build:chrome": "tsx scripts/build.ts chrome",
+    "build:firefox": "tsx scripts/build.ts firefox",
+    "build": "npm run build:chrome && npm run build:firefox",
+    "typecheck": "tsc --noEmit"
+  },
+  "type": "module",
+  "keywords": [
+    "rewst",
+    "browser-extension",
+    "vscode"
+  ],
+  "author": "JBramley",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chrome": "^0.1.32",
+    "@types/firefox-webext-browser": "^143.0.0",
+    "@types/node": "^25.0.3",
+    "esbuild": "^0.27.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}
