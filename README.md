@@ -11,18 +11,18 @@ Companion extension for [Rewst Buddy VS Code Extension](https://marketplace.visu
 ## Installation
 
 ### Chrome / Edge
+
 1. Clone or download this repository
-2. Run `npm install && npm run build:chrome`
-3. Open `chrome://extensions` (or `edge://extensions` for Edge)
-4. Enable "Developer mode"
-5. Click "Load unpacked" and select the `build-chrome/` directory
+2. Open `chrome://extensions` (or `edge://extensions` for Edge)
+3. Enable "Developer mode"
+4. Click "Load unpacked" and select the `build-chrome/` directory
 
 ### Firefox
+
 1. Clone or download this repository
-2. Run `npm install && npm run build:firefox`
-3. Open `about:debugging#/runtime/this-firefox`
-4. Click "Load Temporary Add-on"
-5. Select `manifest.json` from the `build-firefox/` directory
+2. Open `about:debugging#/runtime/this-firefox`
+3. Click "Load Temporary Add-on"
+4. Select `manifest.json` from the `build-firefox/` directory
 
 ## Usage
 
