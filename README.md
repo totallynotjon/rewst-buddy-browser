@@ -32,52 +32,24 @@ This project uses **esbuild** for fast, efficient bundling of TypeScript code. T
 - Icon asset management
 - HTML file copying
 
-## VS Code Tasks
+## Build Commands
 
-The project is configured with the following VS Code tasks:
-
-### Watch Tasks (Auto-rebuild on file changes)
-
-- **Watch Chrome** (`Ctrl+Shift+B` or `Cmd+Shift+P` → "Tasks: Run Task" → "Watch Chrome")
-  - Automatically rebuilds for Chrome on file changes
-  - Output goes to `build-chrome/`
-
-- **Watch Firefox** ("Tasks: Run Task" → "Watch Firefox")
-  - Automatically rebuilds for Firefox on file changes
-  - Output goes to `build-firefox/`
-
-### Build Tasks
-
-- **Build All** (Default build: `Ctrl+Shift+B`)
-  - Builds both Chrome and Firefox versions
-  - `npm run build`
-
-- **Build Chrome**
-  - `npm run build:chrome`
-
-- **Build Firefox**
-  - `npm run build:firefox`
-
-### Type Checking
-
-- **TypeCheck** (Default test task)
-  - Runs TypeScript type checking without emitting files
-  - `npm run typecheck`
-
-## Manual Build Commands
-
+### Development (Watch Mode)
 ```bash
-# Development (watch mode)
-npm run dev:chrome    # Watch and rebuild for Chrome
-npm run dev:firefox   # Watch and rebuild for Firefox
+npm run dev:chrome    # Auto-rebuild for Chrome on file changes
+npm run dev:firefox   # Auto-rebuild for Firefox on file changes
+```
 
-# Production builds
+### Production Builds
+```bash
 npm run build:chrome  # Build for Chrome
 npm run build:firefox # Build for Firefox
-npm run build         # Build both
+npm run build         # Build both browsers
+```
 
-# Type checking
-npm run typecheck     # Check TypeScript types
+### Type Checking
+```bash
+npm run typecheck     # Run TypeScript type checking
 ```
 
 ## Loading the Extension
@@ -171,7 +143,6 @@ Payload format:
 
 ## Next Steps
 
-- [ ] Add extension icons (16x16, 48x48, 128x128)
 - [ ] Add error handling and user feedback in popup
 - [ ] Consider adding content script if DOM parsing is needed
 - [ ] Test with actual VS Code extension integration

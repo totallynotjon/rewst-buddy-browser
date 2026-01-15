@@ -1,21 +1,21 @@
 // Browser API polyfill for cross-browser compatibility
 const browserAPI = (chrome as any)?.browser || chrome;
 
-// Get the button element
 const sendButton = document.getElementById('sendToVSCode');
+const errorDiv = document.getElementById('error');
 
 if (sendButton) {
   sendButton.addEventListener('click', () => {
-    // Send message to background script to get tab data
-    browserAPI.runtime.sendMessage({ action: 'getTabData' }, () => {
-      // Close the popup after sending the message
-      window.close();
+    browserAPI.runtime.sendMessage({ action: 'open' }, (response: any) => {
+      if (response?.success) {
+        window.close();
+      } else if (errorDiv) {
+        errorDiv.textContent = response?.error || 'Unknown error';
+        errorDiv.style.display = 'block';
+      }
     });
   });
 }
 
-console.log("index");
-
-// Export to make this a module (prevents global scope pollution)
 export {};
 

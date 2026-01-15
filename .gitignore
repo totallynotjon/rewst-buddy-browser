@@ -2,8 +2,6 @@
 node_modules/
 
 # Build outputs
-build-chrome/
-build-firefox/
 dist/
 
 # Logs
