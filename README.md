@@ -27,7 +27,7 @@ Companion extension for [Rewst Buddy VS Code Extension](https://marketplace.visu
 ## Usage
 
 1. Install the [Rewst Buddy VS Code Extension](https://marketplace.visualstudio.com/items?itemName=JBramley.rewst-buddy)
-2. Open VS Code (the session receiver server starts automatically)
+2. Enable the Server in Rewst Buddy extension settings
 3. Navigate to any Rewst page - your session transfers automatically
 4. Click the extension icon on a template/script page to open it in VS Code
 
